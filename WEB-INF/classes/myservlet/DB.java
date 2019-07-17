@@ -8,7 +8,7 @@ public class DB {
         Connection con = null;
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://112.74.58.75:3306/OLAS_DB?characterEncoding=gb2312", "root","41710020wys"); //½â¾öºº×ÖÂÒÂëĞèÒª
+            con = DriverManager.getConnection("jdbc:mysql://localhost/OLAS_DB?characterEncoding=gb2312", "root","***"); //Â½Ã¢Â¾Ã¶ÂºÂºÃ—Ã–Ã‚Ã’Ã‚Ã«ÃÃ¨Ã’Âª
         }
         catch(Exception e){
             System.out.printf("err");
