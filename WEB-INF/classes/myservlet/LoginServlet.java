@@ -64,8 +64,8 @@ public class LoginServlet extends HttpServlet {
                             source.setType(rs.getInt(3));
                             source.setSou_ID(rs.getString(4));
                             source.setSum_Count(rs.getInt(5));
-                            source.setSou_Name(rs.getString(6));
-                            source.setShare(rs.getInt(7));
+//                            source.setSou_Name(rs.getString(6));
+//                            source.setShare(rs.getInt(7));
                             tea.sources.add(source);
                         }
                         
