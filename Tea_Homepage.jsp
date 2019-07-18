@@ -1,40 +1,33 @@
 <%@page import="java.util.Iterator"%>
+<%@page import="mybean.teacher_bean"%>
 <%@page import="mybean.class_bean"%>
 <%@page import="mybean.source_bean"%>
-<%@page contentType="text/html" pageEncoding="GBK"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <jsp:useBean id="TeacherBean" type="mybean.teacher_bean" scope="session"/>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=GBK">
-        <title>½ÌÊ¦Ö÷Ò³</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>æ•™å¸ˆä¸»é¡µ</title>
     </head>
     <body>
         
-        Ãû×Ö:<jsp:getProperty name="TeacherBean" property="name"/>
-        ID:<jsp:getProperty name="TeacherBean" property="tea_id"/>
-        ĞÔ±ğ:<jsp:getProperty name="TeacherBean" property="gender"/>
+        åå­—:<jsp:getProperty name="TeacherBean" property="name"/>
+        æ€§åˆ«:<jsp:getProperty name="TeacherBean" property="gender"/>
         
         <%
-            Iterator<class_bean> it = TeacherBean.classes.iterator();	
+            Iterator<source_bean> it = TeacherBean.sources.iterator();	
                 while (it.hasNext()) {		
-                    class_bean n = it.next();
+                    source_bean n = it.next();
                     %>
-                    ³É¼¨1£º<%=%>
-                    ³É¼¨2£º<%=%>
-                    ³É¼¨3£º<%=%>
-                    <%
-                }
-            Iterator<source_bean> it1 = TeacherBean.sources.iterator();	
-                while (it.hasNext()) {		
-                    source_bean n = it1.next();
-                    %>
-                    ³É¼¨1£º<%=%>
-                    ³É¼¨2£º<%=%>
-                    ³É¼¨3£º<%=%>
+                    è¯¾ç¨‹idï¼š<%=n.getCou_ID()%>
+                    ç±»å‹ï¼š<%=n.getType()%>
+                    èµ„æºidï¼š<%=n.getSou_ID()%>
+                    æµè§ˆæ¬¡æ•°ï¼š<%=n.getSum_Count()%>
                     <%
                 }
         %>
-            <br><a href="ChangePassword.jsp">ĞŞ¸ÄÃÜÂë>>>>>></a>
+        
+            <br><a href="ChangePassword.jsp">ä¿®æ”¹å¯†ç >>>>>></a>
     </body>
 </html>
