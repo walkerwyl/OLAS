@@ -15,6 +15,7 @@ import javax.servlet.http.Part;
 @WebServlet(name="EasyUploadServlet",urlPatterns="/EasyUploadServlet")
 @MultipartConfig
 public class EasyUploadServlet extends HttpServlet {
+        @Override
         public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             request.setCharacterEncoding("utf-8");
             response.setCharacterEncoding("utf-8");
