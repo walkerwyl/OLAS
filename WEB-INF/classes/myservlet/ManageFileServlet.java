@@ -51,7 +51,7 @@ public class ManageFileServlet extends HttpServlet {
         Statement sql;
         ResultSet rs;
         try {
-            String uri = "jdbc:mysql://127.0.0.1/OLAS_DB?" + "user=root&&password=41710020wys&characterEncoding=gb2312&useSSL=true&serverTimezone=UTC";
+            String uri = "jdbc:mysql://127.0.0.1/OLAS_DB?" + "user=root&&password=&characterEncoding=gb2312&useSSL=true&serverTimezone=UTC";
             con = DriverManager.getConnection(uri);
             sql = con.createStatement();
 //          根据教师ID得到老师对应的资源列表
